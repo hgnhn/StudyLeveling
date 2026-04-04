@@ -85,6 +85,32 @@
             .login-box { margin: 0 auto; }
             .features { padding: 40px 20px; }
         }
+        /* --- THÔNG BÁO (ANNOUNCEMENTS) --- */
+        .announcements { padding: 60px 20px; background-color: white; }
+        .announcements h2 { text-align: center; font-size: 32px; color: #1e3a8a; margin-bottom: 40px; }
+        .announce-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+        
+        .announce-card {
+            background-color: #f9fafb; padding: 20px; border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #2563eb;
+            transition: 0.3s;
+        }
+        .announce-card:hover { transform: translateX(5px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        
+        .announce-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .tag { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; color: white; }
+        .tag-event { background-color: #f59e0b; } /* Màu vàng cam cho Sự kiện */
+        .tag-update { background-color: #10b981; } /* Màu xanh lá cho Cập nhật */
+        .tag-news { background-color: #3b82f6; }   /* Màu xanh dương cho Tin tức */
+        
+        .announce-date { font-size: 14px; color: #6b7280; font-weight: bold; }
+        .announce-card h3 { color: #1f2937; margin-bottom: 10px; font-size: 20px; }
+        .announce-card p { color: #4b5563; font-size: 15px; }
+        
+        /* Cập nhật lại màu viền tương ứng với tag */
+        .card-event { border-left-color: #f59e0b; }
+        .card-update { border-left-color: #10b981; }
+        .card-news { border-left-color: #3b82f6; }
     </style>
 </head>
 <body>
@@ -171,6 +197,39 @@
                     <div class="feature-icon">🏆</div>
                     <h3>Bảng xếp hạng</h3>
                     <p>Đua top chuỗi, điểm, tổng số bài giải, các chỉ số đóng góp cho cộng đồng.</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="announcements" class="announcements">
+            <h2>📢 Thông Báo Hệ Thống</h2>
+            <div class="announce-list">
+                
+                <div class="announce-card card-event">
+                    <div class="announce-header">
+                        <span class="tag tag-event">Tin tức</span>
+                        <span class="announce-date">04/04/2026</span>
+                    </div>
+                    <h3>Phát động phong trào thi đua học tập Tháng 4</h3>
+                    <p>Nhằm chuẩn bị cho kỳ thi Giữa kỳ sắp tới, StudyLeveling phát động tuần lễ thi đua. Các học sinh hoàn thành 100% bài tập về nhà đúng hạn trong tuần này sẽ được cộng thêm điểm rèn luyện và nhận huy hiệu chuyên cần.</p>
+                </div>
+
+                <div class="announce-card card-update">
+                    <div class="announce-header">
+                        <span class="tag tag-update">Cập nhật</span>
+                        <span class="announce-date">01/04/2026</span>
+                    </div>
+                    <h3>Ra mắt tính năng "Không gian học tập chung"</h3>
+                    <p>Hệ thống vừa cập nhật thêm khu vực chia sẻ tài liệu nội bộ. Giờ đây, ngoài giáo viên, các em học sinh có thể chủ động tải lên các ghi chú bài giảng và tài liệu ôn tập để hỗ trợ các bạn khác trong cùng lớp.</p>
+                </div>
+
+                <div class="announce-card card-news">
+                    <div class="announce-header">
+                        <span class="tag tag-news">Bảo trì</span>
+                        <span class="announce-date">28/03/2026</span>
+                    </div>
+                    <h3>Thông báo bảo trì nâng cấp máy chủ định kỳ</h3>
+                    <p>Để đảm bảo độ ổn định của hệ thống trong thời gian diễn ra các bài kiểm tra trực tuyến, StudyLeveling sẽ tiến hành bảo trì máy chủ từ 22:00 đến 24:00 tối nay. Vui lòng lưu lại toàn bộ tiến trình làm bài trước thời gian này.</p>
                 </div>
 
             </div>
