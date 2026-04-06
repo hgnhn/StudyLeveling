@@ -10,70 +10,82 @@
         a { text-decoration: none; }
         
         header {
-            background-color: white; padding: 15px 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            display: flex; justify-content: space-between; align-items: center;
+            background-color: white; 
+            padding: 10px 50px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
             position: sticky; top: 0; z-index: 1000;
         }
         .logo { font-size: 24px; font-weight: bold; color: #1e3a8a; }
-        .nav-links a { margin-left: 20px; color: #4b5563; font-weight: 500; transition: 0.3s; white-space: nowrap; }
+
+        .header-right {
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-end; 
+            gap: 10px; 
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px; 
+        }
+        .nav-links a { 
+            color: #4b5563; 
+            font-weight: 500; 
+            transition: 0.3s; 
+            white-space: nowrap; 
+        }
         .nav-links a:hover { color: #2563eb; }
 
-        .hero {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 60px 50px; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white; min-height: 500px; gap: 40px; flex-wrap: wrap;
+        .lang-btn {
+            background-color: #eff6ff;
+            padding: 6px 14px !important;
+            border-radius: 20px;
+            color: #2563eb !important;
+            font-weight: bold;
+            border: 1px solid #bfdbfe;
+            transition: 0.3s;
         }
+        .lang-btn:hover {
+            background-color: #dbeafe;
+            transform: scale(1.05);
+        }
+
+        .hero { display: flex; justify-content: space-between; align-items: center; padding: 60px 50px; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; min-height: 500px; gap: 40px; flex-wrap: wrap; }
         .hero-content { flex: 1; min-width: 300px; }
         .hero-content h1 { font-size: 42px; margin-bottom: 20px; line-height: 1.2; }
         .hero-content p { font-size: 18px; margin-bottom: 30px; opacity: 0.9; }
-        
-        .login-box {
-            background-color: white; padding: 30px; border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2); width: 100%; max-width: 400px; color: #333;
-        }
+        .login-box { background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); width: 100%; max-width: 400px; color: #333; }
         .login-box h2 { text-align: center; color: #1e3a8a; margin-bottom: 20px; }
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #374151; }
-        .form-group input, .form-group select {
-            width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; outline: none;
-        }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; outline: none; }
         .form-group input:focus { border-color: #2563eb; }
-        .btn-login {
-            width: 100%; padding: 12px; background-color: #2563eb; color: white;
-            border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer;
-            margin-top: 10px; transition: 0.3s;
-        }
+        .btn-login { width: 100%; padding: 12px; background-color: #2563eb; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.3s; }
         .btn-login:hover { background-color: #1d4ed8; }
-
         .about { text-align: center; padding: 60px 20px; background-color: white; }
         .about h2 { font-size: 32px; color: #1e3a8a; margin-bottom: 20px; }
         .about p { max-width: 800px; margin: 0 auto; color: #4b5563; font-size: 18px; }
-
         .features { padding: 60px 50px; background-color: #f3f4f6; }
         .features h2 { text-align: center; font-size: 32px; color: #1e3a8a; margin-bottom: 40px; }
-        .feature-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
-        }
-        .feature-card {
-            background-color: white; padding: 30px; border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; transition: 0.3s;
-        }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature-card { background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
         .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
         .feature-icon { font-size: 40px; margin-bottom: 15px; }
         .feature-card h3 { color: #1f2937; margin-bottom: 10px; }
         .feature-card p { color: #6b7280; }
-
-        footer {
-            background-color: #111827; color: #d1d5db; text-align: center; padding: 40px 20px;
-        }
+        footer { background-color: #111827; color: #d1d5db; text-align: center; padding: 40px 20px; }
         footer h3 { color: white; margin-bottom: 15px; }
         .contact-info p { margin-bottom: 10px; }
         .copyright { margin-top: 20px; font-size: 14px; border-top: 1px solid #374151; padding-top: 20px; }
 
         @media (max-width: 768px) {
             header { flex-direction: column; padding: 15px; }
-            .nav-links { margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-            .nav-links a { margin-left: 0; } 
+            .header-right { margin-top: 15px; align-items: center; gap: 15px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 10px; }
+            .lang-btn { margin-left: 0; }
             
             .hero { padding: 40px 20px; flex-direction: column; text-align: center; }
             .login-box { margin: 0 auto; }
@@ -83,55 +95,34 @@
         }
         .news { padding: 60px 50px; background-color: white; }
         .news h2 { text-align: center; font-size: 32px; color: #1e3a8a; margin-bottom: 40px; }
-        .news-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; 
-            max-width: 1200px; margin: 0 auto;
-        }
-        .news-card {
-            background-color: white; border-radius: 8px; overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s;
-            cursor: pointer; border: 1px solid #f3f4f6;
-        }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .news-card { background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; cursor: pointer; border: 1px solid #f3f4f6; }
         .news-card:hover { transform: translateY(-5px); box-shadow: 0 12px 20px rgba(0,0,0,0.15); }
-        
         .news-image { width: 100%; height: 200px; overflow: hidden; }
         .news-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .news-card:hover .news-image img { transform: scale(1.05); }
-        
         .news-content { padding: 20px; }
         .news-meta { font-size: 12px; color: #6b7280; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
         .news-category { color: #d97706; } 
-        
         .news-card h3 { font-size: 18px; color: #111827; margin-bottom: 12px; line-height: 1.4; transition: color 0.3s; }
         .news-card:hover h3 { color: #2563eb; }
         .news-card p { font-size: 14px; color: #4b5563; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-
-        .lang-btn {
-            background-color: #eff6ff;
-            padding: 6px 14px !important;
-            border-radius: 20px;
-            color: #2563eb !important;
-            font-weight: bold;
-            border: 1px solid #bfdbfe;
-            margin-left: 20px;
-        }
-        .lang-btn:hover {
-            background-color: #dbeafe;
-            transform: scale(1.05);
-        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">StudyLeveling</div>
-        <nav class="nav-links">
-            <a href="#hero">Đăng nhập</a>
-            <a href="#about">Giới thiệu</a>
-            <a href="#features">Tính năng</a>
-            <a href="#news">Thông báo</a> 
+        
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="#hero">Đăng nhập</a>
+                <a href="#about">Giới thiệu</a>
+                <a href="#features">Tính năng</a>
+                <a href="#news">Thông báo</a> 
+            </nav>
             <a href="index-en.html" class="lang-btn">🌐 EN</a>
-        </nav>
+        </div>
     </header>
 
     <main>
