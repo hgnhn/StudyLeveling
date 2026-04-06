@@ -79,31 +79,30 @@
             .login-box { margin: 0 auto; }
             .features { padding: 40px 20px; }
         }
-        
-        .announcements { padding: 60px 20px; background-color: white; }
-        .announcements h2 { text-align: center; font-size: 32px; color: #1e3a8a; margin-bottom: 40px; }
-        .announce-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
-        
-        .announce-card {
-            background-color: #f9fafb; padding: 20px; border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #2563eb;
-            transition: 0.3s;
+        .news { padding: 60px 50px; background-color: white; }
+        .news h2 { text-align: center; font-size: 32px; color: #1e3a8a; margin-bottom: 40px; }
+        .news-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; 
+            max-width: 1200px; margin: 0 auto;
         }
-        .announce-card:hover { transform: translateX(5px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .news-card {
+            background-color: white; border-radius: 8px; overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s;
+            cursor: pointer; border: 1px solid #f3f4f6;
+        }
+        .news-card:hover { transform: translateY(-5px); box-shadow: 0 12px 20px rgba(0,0,0,0.15); }
         
-        .announce-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .tag { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; color: white; }
-        .tag-event { background-color: #f59e0b; } 
-        .tag-update { background-color: #10b981; } 
-        .tag-news { background-color: #3b82f6; }   
+        .news-image { width: 100%; height: 200px; overflow: hidden; }
+        .news-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .news-card:hover .news-image img { transform: scale(1.05); }
         
-        .announce-date { font-size: 14px; color: #6b7280; font-weight: bold; }
-        .announce-card h3 { color: #1f2937; margin-bottom: 10px; font-size: 20px; }
-        .announce-card p { color: #4b5563; font-size: 15px; }
+        .news-content { padding: 20px; }
+        .news-meta { font-size: 12px; color: #6b7280; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .news-category { color: #d97706; } 
         
-        .card-event { border-left-color: #f59e0b; }
-        .card-update { border-left-color: #10b981; }
-        .card-news { border-left-color: #3b82f6; }
+        .news-card h3 { font-size: 18px; color: #111827; margin-bottom: 12px; line-height: 1.4; transition: color 0.3s; }
+        .news-card:hover h3 { color: #2563eb; }
+        .news-card p { font-size: 14px; color: #4b5563; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
 <body>
@@ -195,35 +194,47 @@
 
             </div>
         </section>
-        <section id="announcements" class="announcements">
-            <h2>📢 Thông báo hệ thống</h2>
-            <div class="announce-list">
+        <section id="news" class="news">
+            <h2>📰 Tin Tức & Cập Nhật</h2>
+            <div class="news-grid">
                 
-                <div class="announce-card card-event">
-                    <div class="announce-header">
-                        <span class="tag tag-event">Tin tức</span>
-                        <span class="announce-date">04/04/2026</span>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="images/news1.jpg" alt="Hình ảnh sự kiện">
                     </div>
-                    <h3>Phát động phong trào thi đua học tập Tháng 4</h3>
-                    <p>Nhằm chuẩn bị cho kỳ thi Giữa kỳ sắp tới, StudyLeveling phát động tuần lễ thi đua. Các học sinh hoàn thành 100% bài tập về nhà đúng hạn trong tuần này sẽ được cộng thêm điểm rèn luyện và nhận huy hiệu chuyên cần.</p>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category">SỰ KIỆN</span> | <span>06/04/2026</span>
+                        </div>
+                        <h3>Kỳ thi Giữa kỳ bắt đầu</h3>
+                        <p>Chuẩn bị tinh thần cho mùa giải xếp hạng mới với hàng loạt cập nhật về trang bị và phần thưởng hấp dẫn dành cho các học bá đạt thành tích xuất sắc nhất toàn trường.</p>
+                    </div>
                 </div>
 
-                <div class="announce-card card-update">
-                    <div class="announce-header">
-                        <span class="tag tag-update">Cập nhật</span>
-                        <span class="announce-date">01/04/2026</span>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="images/news2.jpg" alt="Hình ảnh cập nhật">
                     </div>
-                    <h3>Ra mắt tính năng "Không gian học tập chung"</h3>
-                    <p>Hệ thống vừa cập nhật thêm khu vực chia sẻ tài liệu nội bộ. Giờ đây, ngoài giáo viên, các em học sinh có thể chủ động tải lên các ghi chú bài giảng và tài liệu ôn tập để hỗ trợ các bạn khác trong cùng lớp.</p>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category">CẬP NHẬT</span> | <span>01/04/2026</span>
+                        </div>
+                        <h3>Bản Vá 1.2: Cân Bằng "Sức Mạnh" Môn Toán</h3>
+                        <p>Sau nhiều ý kiến phản hồi từ các chiến binh, chúng tôi đã giảm nhẹ độ khó (HP) của các quái vật Hình Học Không Gian và tăng tỷ lệ rớt đồ cho các bài tập Đại Số.</p>
+                    </div>
                 </div>
 
-                <div class="announce-card card-news">
-                    <div class="announce-header">
-                        <span class="tag tag-news">Bảo trì</span>
-                        <span class="announce-date">28/03/2026</span>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="images/news3.jpg" alt="Hình ảnh cộng đồng">
                     </div>
-                    <h3>Thông báo bảo trì nâng cấp máy chủ định kỳ</h3>
-                    <p>Để đảm bảo độ ổn định của hệ thống trong thời gian diễn ra các bài kiểm tra trực tuyến, StudyLeveling sẽ tiến hành bảo trì máy chủ từ 22:00 đến 24:00 tối nay. Vui lòng lưu lại toàn bộ tiến trình làm bài trước thời gian này.</p>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category">CỘNG ĐỒNG</span> | <span>28/03/2026</span>
+                        </div>
+                        <h3>Vinh Danh: Tuyển Thủ Đạt Chuỗi 100 Ngày</h3>
+                        <p>Cùng chúc mừng chiến binh "NguyenVanA_Pro" đã xuất sắc giữ vững chuỗi làm bài tập 100 ngày liên tiếp, mở khóa thành công danh hiệu Độc Cô Cầu Bại.</p>
+                    </div>
                 </div>
 
             </div>
